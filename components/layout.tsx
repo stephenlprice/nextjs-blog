@@ -4,10 +4,15 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+type LayoutProps = {
+  children: any,
+  home?: any,
+}
+
 const name = 'stelloprint';
 export const siteTitle = 'stelloprint.dev';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: LayoutProps ) {
   return (
     <div className={styles.container}>
       <Head>
